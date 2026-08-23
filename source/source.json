@@ -1,0 +1,6 @@
+{
+  "name": "SWU API full export",
+  "url": "https://api.swuapi.com/export/all",
+  "authoritativeFor": "catalog-import",
+  "publication": "manual-for-private-alpha"
+}

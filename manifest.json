@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "game": "star-wars-unlimited",
+  "name": "Star Wars: Unlimited",
+  "databaseVersion": "0.2.0",
+  "status": "build-from-complete-source",
+  "entrypoint": "runtime/cards.min.json",
+  "visionIndex": "runtime/vision-index.json",
+  "source": "SWU API full export"
+}
