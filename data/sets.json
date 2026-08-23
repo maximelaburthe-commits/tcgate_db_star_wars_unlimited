@@ -1,1 +1,254 @@
-[]
+[
+  {
+    "uuid": "019d3176-41ea-7207-b64e-789f2b57a00d",
+    "code": "SOR",
+    "name": "Spark of Rebellion",
+    "release_date": null,
+    "total_cards": 991,
+    "created_at": "2026-03-27T22:42:06.979Z",
+    "updated_at": "2026-08-23T20:30:00.309Z"
+  },
+  {
+    "uuid": "019d3176-4222-7988-9701-4b9a6442aa74",
+    "code": "SHD",
+    "name": "Shadows of the Galaxy",
+    "release_date": null,
+    "total_cards": 1008,
+    "created_at": "2026-03-27T22:42:07.037Z",
+    "updated_at": "2026-08-23T20:30:00.316Z"
+  },
+  {
+    "uuid": "019d3176-43e8-7ebf-8651-82a44797da03",
+    "code": "C24",
+    "name": "2024 Convention Exclusive",
+    "release_date": null,
+    "total_cards": 6,
+    "created_at": "2026-03-27T22:42:07.495Z",
+    "updated_at": "2026-08-23T20:30:00.323Z"
+  },
+  {
+    "uuid": "019d3176-425f-70e0-8758-d0b331223ef2",
+    "code": "TWI",
+    "name": "Twilight of the Republic",
+    "release_date": null,
+    "total_cards": 1008,
+    "created_at": "2026-03-27T22:42:07.091Z",
+    "updated_at": "2026-08-23T20:30:00.328Z"
+  },
+  {
+    "uuid": "019d3176-4296-7b91-8b32-8f54089f065a",
+    "code": "JTL",
+    "name": "Jump to Lightspeed",
+    "release_date": null,
+    "total_cards": 1130,
+    "created_at": "2026-03-27T22:42:07.151Z",
+    "updated_at": "2026-08-23T20:30:00.333Z"
+  },
+  {
+    "uuid": "019d3176-44cf-71c9-b194-70d38fa60772",
+    "code": "JTLP",
+    "name": "Jump to Lightspeed Weekly Play",
+    "release_date": null,
+    "total_cards": 40,
+    "created_at": "2026-03-27T22:42:07.719Z",
+    "updated_at": "2026-08-23T20:30:00.339Z"
+  },
+  {
+    "uuid": "019d3176-4429-753e-9a9c-e8f89e2d3773",
+    "code": "P25",
+    "name": "2025 Promo",
+    "release_date": null,
+    "total_cards": 178,
+    "created_at": "2026-03-27T22:42:07.554Z",
+    "updated_at": "2026-08-23T20:30:00.344Z"
+  },
+  {
+    "uuid": "019d3176-43b2-7b7e-b22f-90e8a4eb30ac",
+    "code": "GG",
+    "name": "Gamegenic",
+    "release_date": null,
+    "total_cards": 6,
+    "created_at": "2026-03-27T22:42:07.433Z",
+    "updated_at": "2026-08-23T20:30:00.350Z"
+  },
+  {
+    "uuid": "019d3176-437e-7a2e-8efc-d7a6057a32fa",
+    "code": "J24",
+    "name": "2024 Judge Program",
+    "release_date": null,
+    "total_cards": 6,
+    "created_at": "2026-03-27T22:42:07.380Z",
+    "updated_at": "2026-08-23T20:30:00.355Z"
+  },
+  {
+    "uuid": "019d3176-4462-7d98-8b7c-26373e7f8976",
+    "code": "J25",
+    "name": "2025 Judge Program",
+    "release_date": null,
+    "total_cards": 19,
+    "created_at": "2026-03-27T22:42:07.610Z",
+    "updated_at": "2026-08-23T20:30:00.360Z"
+  },
+  {
+    "uuid": "019d3176-42d0-7d27-b5ce-aeccf576a908",
+    "code": "LOF",
+    "name": "Legends of the Force",
+    "release_date": null,
+    "total_cards": 1166,
+    "created_at": "2026-03-27T22:42:07.210Z",
+    "updated_at": "2026-08-23T20:30:00.365Z"
+  },
+  {
+    "uuid": "019d3176-453e-78ef-8de4-805670cbad9f",
+    "code": "LOFP",
+    "name": "Legends of the Force Weekly Play",
+    "release_date": null,
+    "total_cards": 40,
+    "created_at": "2026-03-27T22:42:07.830Z",
+    "updated_at": "2026-08-23T20:30:00.369Z"
+  },
+  {
+    "uuid": "019d3176-450a-7b64-b46a-75bf09e1def3",
+    "code": "C25",
+    "name": "2025 Convention Exclusive",
+    "release_date": null,
+    "total_cards": 6,
+    "created_at": "2026-03-27T22:42:07.775Z",
+    "updated_at": "2026-08-23T20:30:00.374Z"
+  },
+  {
+    "uuid": "019d3176-4497-7688-af59-b2c1fe444536",
+    "code": "IBH",
+    "name": "Intro Battle: Hoth",
+    "release_date": null,
+    "total_cards": 104,
+    "created_at": "2026-03-27T22:42:07.663Z",
+    "updated_at": "2026-08-23T20:30:00.379Z"
+  },
+  {
+    "uuid": "019d3176-430b-7ff1-9925-21fd0858e9da",
+    "code": "SEC",
+    "name": "Secrets of Power",
+    "release_date": null,
+    "total_cards": 1197,
+    "created_at": "2026-03-27T22:42:07.271Z",
+    "updated_at": "2026-08-23T20:30:00.384Z"
+  },
+  {
+    "uuid": "019d3176-45af-7a41-b268-c504c474e0cd",
+    "code": "SECP",
+    "name": "Secrets of Power Weekly Play",
+    "release_date": null,
+    "total_cards": 40,
+    "created_at": "2026-03-27T22:42:07.942Z",
+    "updated_at": "2026-08-23T20:30:00.390Z"
+  },
+  {
+    "uuid": "019d3176-45e9-7387-bd78-0d0fd7489c72",
+    "code": "P26",
+    "name": "2026 Promo",
+    "release_date": null,
+    "total_cards": 224,
+    "created_at": "2026-03-27T22:42:07.999Z",
+    "updated_at": "2026-08-23T20:30:00.396Z"
+  },
+  {
+    "uuid": "019d3176-4577-7b0c-8cc2-447b4309c13f",
+    "code": "G25",
+    "name": "2025 Gift Box",
+    "release_date": null,
+    "total_cards": 2,
+    "created_at": "2026-03-27T22:42:07.888Z",
+    "updated_at": "2026-08-23T20:30:00.401Z"
+  },
+  {
+    "uuid": "019d3176-4345-72a3-9007-2c1d84cf24b9",
+    "code": "LAW",
+    "name": "A Lawless Time",
+    "release_date": null,
+    "total_cards": 907,
+    "created_at": "2026-03-27T22:42:07.323Z",
+    "updated_at": "2026-08-23T20:30:00.408Z"
+  },
+  {
+    "uuid": "019d4cf6-9c7d-7624-90f5-588312fa431d",
+    "code": "LAWP",
+    "name": "A Lawless Time Weekly Play",
+    "release_date": null,
+    "total_cards": 40,
+    "created_at": "2026-04-02T06:52:03.584Z",
+    "updated_at": "2026-08-23T20:30:00.414Z"
+  },
+  {
+    "uuid": "019d3176-4637-7a00-b26f-7cdbc57d9f14",
+    "code": "TS26",
+    "name": "2026 Twin Suns",
+    "release_date": null,
+    "total_cards": 88,
+    "created_at": "2026-03-27T22:42:08.078Z",
+    "updated_at": "2026-08-23T20:30:00.419Z"
+  },
+  {
+    "uuid": "019e6d32-a637-72b6-8f9b-1803ee180ef7",
+    "code": "ASH",
+    "name": "Ashes of the Empire",
+    "release_date": null,
+    "total_cards": 931,
+    "created_at": "2026-05-28T06:08:16.445Z",
+    "updated_at": "2026-08-23T20:30:00.423Z"
+  },
+  {
+    "uuid": "019f07b4-06dd-733d-a80c-035ebd6e8bcc",
+    "code": "ASHP",
+    "name": "Ashes of the Empire Weekly Play",
+    "release_date": null,
+    "total_cards": 40,
+    "created_at": "2026-06-27T06:11:06.589Z",
+    "updated_at": "2026-08-23T20:30:00.427Z"
+  },
+  {
+    "uuid": "019e8c19-84f6-7af4-8acb-32afecbfa12d",
+    "code": "MV26",
+    "name": "The Mandalorian and Grogu Movie Promo",
+    "release_date": null,
+    "total_cards": 2,
+    "created_at": "2026-06-03T06:09:03.223Z",
+    "updated_at": "2026-08-23T20:30:00.431Z"
+  },
+  {
+    "uuid": "019e9669-2efe-7f9a-8db7-a78ba7b83485",
+    "code": "C26",
+    "name": "2026 Convention Exclusive",
+    "release_date": null,
+    "total_cards": 6,
+    "created_at": "2026-06-05T06:12:16.254Z",
+    "updated_at": "2026-08-23T20:30:00.436Z"
+  },
+  {
+    "uuid": "ef86defc-1242-42be-8b2f-f5ef6d9e6a51",
+    "code": "TWIP",
+    "name": "Twilight of the Republic Weekly Play",
+    "release_date": "2024-11-08T00:00:00.000Z",
+    "total_cards": null,
+    "created_at": "2026-04-14T07:30:20.662Z",
+    "updated_at": "2026-05-26T21:24:12.555Z"
+  },
+  {
+    "uuid": "34038b7f-1be2-41f8-8bb4-b5c7b8f6c999",
+    "code": "SHDP",
+    "name": "Shadows of the Galaxy Weekly Play",
+    "release_date": "2024-07-12T00:00:00.000Z",
+    "total_cards": null,
+    "created_at": "2026-04-14T07:30:20.662Z",
+    "updated_at": "2026-05-26T21:24:12.555Z"
+  },
+  {
+    "uuid": "812f8834-477a-47b2-ad98-37659ac0a32d",
+    "code": "SORP",
+    "name": "Spark of Rebellion Weekly Play",
+    "release_date": "2024-03-08T00:00:00.000Z",
+    "total_cards": null,
+    "created_at": "2026-04-14T07:30:20.662Z",
+    "updated_at": "2026-05-26T21:24:12.555Z"
+  }
+]
