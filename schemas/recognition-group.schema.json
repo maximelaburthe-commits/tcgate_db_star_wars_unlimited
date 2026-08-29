@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["recognitionGroupId", "cardId", "side", "visualFamilyId", "printingIds", "candidatePrintingIds", "classification", "reason", "evidence", "representativeRefId"],
+  "properties": {
+    "recognitionGroupId": {"type": "string", "pattern": "^swurg-[0-9a-f]{20}$"},
+    "cardId": {"type": "string", "minLength": 1},
+    "side": {"enum": ["front", "back"]},
+    "visualFamilyId": {"type": "string", "pattern": "^swuvf-[0-9a-f]{20}$"},
+    "printingIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "candidatePrintingIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "classification": {"enum": ["shared", "exact_candidate", "unknown"]},
+    "reason": {"type": "string", "minLength": 1},
+    "evidence": {"type": "object"},
+    "representativeRefId": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}

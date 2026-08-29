@@ -77,5 +77,18 @@
   "sourceCardNumberCoverage": 9185,
   "doubleSidedPrintings": 461,
   "frontFaces": 9185,
-  "backFaces": 461
+  "backFaces": 461,
+  "visualAnalysisVersion": 1,
+  "recognitionModelVersion": "swu-recognition-v1-dev",
+  "recognitionProfileId": "swu-v1-canonical-dev",
+  "imageAnalysisSuccess": 9646,
+  "imageAnalysisFailure": 0,
+  "visualFamilies": 7180,
+  "recognitionGroups": 7180,
+  "sharedRecognitionGroups": 2405,
+  "exactCandidateRecognitionGroups": 4775,
+  "unknownRecognitionGroups": 0,
+  "canonicalVisionReferences": 7180,
+  "canonicalVisionFrontReferences": 6719,
+  "canonicalVisionBackReferences": 461
 }

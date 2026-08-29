@@ -2,18 +2,28 @@
   "schemaVersion": 1,
   "game": "star-wars-unlimited",
   "name": "Star Wars: Unlimited",
-  "databaseVersion": "0.3.0-dev.1",
+  "databaseVersion": "0.3.0-dev.2",
   "normalizationVersion": "swu-normalization-v2",
   "identityModelVersion": "swu-gameplay-fingerprint-v1",
   "faceModelVersion": "swu-face-v1",
+  "visualAnalysisVersion": 1,
+  "recognitionModelVersion": "swu-recognition-v1-dev",
+  "recognitionProfileId": "swu-v1-canonical-dev",
   "status": "build-from-complete-source",
   "entrypoint": "runtime/cards.min.json",
   "visionIndex": "runtime/vision-index.json",
   "faces": "data/faces.json",
+  "visualFamilies": "data/visual-families.json",
+  "recognitionGroups": "data/recognition-groups.json",
+  "visualFingerprints": "data/visual-fingerprints.json",
+  "canonicalVisionIndex": "runtime/canonical-vision-index.json",
+  "printingRecognitionIndex": "runtime/printing-recognition-index.json",
   "schemas": {
     "card": "schemas/card.schema.json",
     "printing": "schemas/printing.schema.json",
-    "face": "schemas/face.schema.json"
+    "face": "schemas/face.schema.json",
+    "visualFamily": "schemas/visual-family.schema.json",
+    "recognitionGroup": "schemas/recognition-group.schema.json"
   },
   "source": "SWU API full export"
 }

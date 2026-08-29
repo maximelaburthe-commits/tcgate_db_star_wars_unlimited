@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["visualFamilyId", "cardId", "side", "refIds", "printingIds", "relationClassification"],
+  "properties": {
+    "visualFamilyId": {"type": "string", "pattern": "^swuvf-[0-9a-f]{20}$"},
+    "cardId": {"type": "string", "minLength": 1},
+    "side": {"enum": ["front", "back"]},
+    "refIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "printingIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "relationClassification": {"enum": ["VISUALLY_IDENTICAL", "LIKELY_SAME_ARTWORK", "CLEARLY_DIFFERENT", "UNKNOWN"]}
+  },
+  "additionalProperties": false
+}
