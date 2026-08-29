@@ -44,6 +44,14 @@ Checkpoint 3B adds two conservative visual layers:
 
 `runtime/canonical-vision-index.json` is the future Stage 1 reference set for recognizing `cardId + side`. `runtime/printing-recognition-index.json` then returns candidate printings without arbitrary selection. The development profile is `swu-v1-canonical-dev`.
 
+## Scalable matcher qualification (3C)
+
+The global Stage 1 index uses the real TCGate matcher coarse descriptor: a 6×9 grid with four Float32 channels per cell (216 values per reference), compiled in headless Chromium with the same Canvas preprocessing as `public/identification-worker.js` at TCGate commit `b63435e2796e0bf4f5118fcc8106a8eec44d1d2f`. Provenance and the worker SHA-256 are embedded in the manifests.
+
+The qualified architecture is a B/C hybrid: load the compact global coarse index, shortlist references, then fetch card/family-scoped precomputed detailed shards when available, with on-demand Vision asset descriptor construction and browser caching as fallback. The repository does not contain the roughly 1 GB uncompressed full detailed library.
+
+Stage 1 returns `cardId + side + visualFamilyId + recognitionGroupId`. It never exposes an `exact_candidate` as a guaranteed physical printing. Four Standard/Foil groups flagged by the detailed audit remain unchanged in 3B and require a separate evidence review.
+
 ## Reproducible visual audit
 
 Install `requirements.txt`, then run:

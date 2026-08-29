@@ -1,0 +1,705 @@
+{
+  "descriptorVersion": "tcgate-ident-v5-fast-72x108-b63435e",
+  "sampleSize": 556,
+  "queryTransforms": [
+    "unaltered",
+    "brightness(1.08)+contrast(1.03)",
+    "rotation(1.5deg)",
+    "crop(1.8%)"
+  ],
+  "queryBuildMilliseconds": 6831.458,
+  "load": {
+    "coldMilliseconds": 15.064,
+    "manifestRefs": 7180,
+    "floatCount": 1550880,
+    "runtimeBytes": 6203520
+  },
+  "scanMilliseconds": {
+    "mean": 7.196677,
+    "p50": 6.6794,
+    "p95": 8.4805,
+    "max": 206.8988
+  },
+  "recallAtK": {
+    "1": 0.9676258992805755,
+    "4": 1,
+    "8": 1,
+    "16": 1,
+    "24": 1,
+    "32": 1,
+    "48": 1,
+    "64": 1
+  },
+  "falseNeighborMargins": {
+    "p1": -0.0009259722170702478,
+    "p5": 0.00014166715076180392,
+    "p50": 0.00479544118185804,
+    "below075": 526,
+    "below135": 555,
+    "top50": [
+      {
+        "refId": "swup-019d3179-2765-776b-a0c0-49d59fcfedfd:front",
+        "falseRefId": "swup-019d3178-ea0b-7b91-8573-5a324242369a:front",
+        "margin": -0.00345653346950181,
+        "correctScore": 0.988878730639593,
+        "falseScore": 0.9923352641090948,
+        "falseCardId": "swu-droid-commando-unit-7e6cfd806b9c",
+        "falseVisualFamilyId": "swuvf-80870e1b40609f653766"
+      },
+      {
+        "refId": "swup-019d3179-9527-7aa0-a771-a3e73caadedc:front",
+        "falseRefId": "swup-019d3178-ea0b-7b91-8573-5a324242369a:front",
+        "margin": -0.0026486038401887235,
+        "correctScore": 0.9887593363740266,
+        "falseScore": 0.9914079402142153,
+        "falseCardId": "swu-droid-commando-unit-7e6cfd806b9c",
+        "falseVisualFamilyId": "swuvf-80870e1b40609f653766"
+      },
+      {
+        "refId": "swup-019d3179-c343-716f-bbad-f59f949410bc:front",
+        "falseRefId": "swup-019d317a-0236-7c52-ad60-3ec9b86b5f34:front",
+        "margin": -0.0026484704659419656,
+        "correctScore": 0.9820134642979677,
+        "falseScore": 0.9846619347639096,
+        "falseCardId": "swu-colossus-base-33cf175bfec2",
+        "falseVisualFamilyId": "swuvf-f384e13d1803a9322314"
+      },
+      {
+        "refId": "swup-019f07b4-0f72-7a5e-bb09-f19332098a5f:front",
+        "falseRefId": "swup-019f07b4-0de7-7996-8254-8fd810999ecd:front",
+        "margin": -0.0017969709439158432,
+        "correctScore": 0.9925680055286796,
+        "falseScore": 0.9943649764725955,
+        "falseCardId": "swu-wicket-yub-nub-unit-9cbc8d29309b",
+        "falseVisualFamilyId": "swuvf-b60386202170d0f8af5f"
+      },
+      {
+        "refId": "swup-019d317b-7aa5-7b69-bf53-1a63b215d1a7:front",
+        "falseRefId": "swup-019d317b-0d2e-7058-b880-fe1e82c026e8:front",
+        "margin": -0.0011704080300055653,
+        "correctScore": 0.990401893043236,
+        "falseScore": 0.9915723010732416,
+        "falseCardId": "swu-mind-trick-event-ce2b9511e971",
+        "falseVisualFamilyId": "swuvf-70a62c0c1a263bce3848"
+      },
+      {
+        "refId": "swup-019d3178-773f-758a-87ea-95884512fbc2:front",
+        "falseRefId": "swup-019d3177-086d-70da-8baa-29aead07c13a:front",
+        "margin": -0.0009259722170702478,
+        "correctScore": 0.9960872121762677,
+        "falseScore": 0.997013184393338,
+        "falseCardId": "swu-unexpected-escape-event-3dadb959c4fd",
+        "falseVisualFamilyId": "swuvf-2ee0e30e20b98e722f6f"
+      },
+      {
+        "refId": "swup-019d3179-f503-7e53-b336-a2004d52eb9d:front",
+        "falseRefId": "swup-019d317a-391b-7ebf-aa67-b3fb07d7388f:front",
+        "margin": -0.0007558113907173425,
+        "correctScore": 0.9952536158826203,
+        "falseScore": 0.9960094272733376,
+        "falseCardId": "swu-punch-it-event-7a4f46410dab",
+        "falseVisualFamilyId": "swuvf-97a2e2052e19a8171b60"
+      },
+      {
+        "refId": "swup-019d3177-4d4e-74d0-bc87-90f08f0f8c04:back",
+        "falseRefId": "swup-019d3177-9060-74a4-b407-79976e1f9427:back",
+        "margin": -0.000685201411946057,
+        "correctScore": 0.9927809649742848,
+        "falseScore": 0.9934661663862309,
+        "falseCardId": "swu-darth-vader-dark-lord-of-the-sith-leader-3b1b5b7f98d3",
+        "falseVisualFamilyId": "swuvf-205647127f36f9ab31b0"
+      },
+      {
+        "refId": "swup-019d3179-4b8f-7d59-aa78-9d7261ec44bd:front",
+        "falseRefId": "swup-019d3177-59e2-7b46-852b-0ce0706a87af:front",
+        "margin": -0.0006605929497284224,
+        "correctScore": 0.9935987237511374,
+        "falseScore": 0.9942593167008659,
+        "falseCardId": "swu-volunteer-soldier-unit-1ab40e0d51d5",
+        "falseVisualFamilyId": "swuvf-f1aa6f11f24580341777"
+      },
+      {
+        "refId": "swup-019d317a-62c6-7f6f-b2de-b2c95a49932a:front",
+        "falseRefId": "swup-019d3179-e494-7c95-95b7-84c2c2f52d22:front",
+        "margin": -0.000616332166359923,
+        "correctScore": 0.988240710374373,
+        "falseScore": 0.9888570425407329,
+        "falseCardId": "swu-determined-recruit-unit-ae64ac52df07",
+        "falseVisualFamilyId": "swuvf-47db9fdf92085a546da0"
+      },
+      {
+        "refId": "swup-019d317d-4ff1-7dfb-aa96-2f4e33774444:front",
+        "falseRefId": "swup-019d3176-711d-7568-8c34-bf3e323712e6:front",
+        "margin": -0.00043879678909763964,
+        "correctScore": 0.9927185185458345,
+        "falseScore": 0.9931573153349321,
+        "falseCardId": "swu-canto-bight-base-dcda29b37468",
+        "falseVisualFamilyId": "swuvf-65b15ee9840bdc697b1d"
+      },
+      {
+        "refId": "swup-019d3177-16d3-7485-9ae0-93103ef65f8e:front",
+        "falseRefId": "swup-019d317a-3318-70f5-b8ba-52be0a8861d3:front",
+        "margin": -0.000348176958866353,
+        "correctScore": 0.9947469344846187,
+        "falseScore": 0.9950951114434851,
+        "falseCardId": "swu-home-one-on-my-mark-unit-1379b0bc2a2c",
+        "falseVisualFamilyId": "swuvf-a17e18b1e809cb6cb5c0"
+      },
+      {
+        "refId": "swup-019d317c-57cd-73b9-a27d-7a6cfdde4e06:front",
+        "falseRefId": "swup-019d317c-d52d-7a9c-adc9-0b86e2079042:front",
+        "margin": -0.00032439220725311024,
+        "correctScore": 0.9931715697733356,
+        "falseScore": 0.9934959619805888,
+        "falseCardId": "swu-accelerate-our-plans-event-df0c209d8be5",
+        "falseVisualFamilyId": "swuvf-cfffb32d563ad23a777c"
+      },
+      {
+        "refId": "swup-019d317c-c847-7756-b562-143cc3f8eb01:front",
+        "falseRefId": "swup-019d317c-4a63-7c18-9cf2-c203a6fa8036:front",
+        "margin": -0.0002949544261739989,
+        "correctScore": 0.9899049349676188,
+        "falseScore": 0.9901998893937928,
+        "falseCardId": "swu-aat-incinerator-unit-9ddb6319222c",
+        "falseVisualFamilyId": "swuvf-21960d64fcdad04ce94c"
+      },
+      {
+        "refId": "swup-019d317c-ecea-7b67-9a04-e322a24bfbce:front",
+        "falseRefId": "swup-019d317c-75ab-7119-8f7a-7f903122670a:front",
+        "margin": -0.0000824744965223223,
+        "correctScore": 0.9951532100876995,
+        "falseScore": 0.9952356845842218,
+        "falseCardId": "swu-ahsoka-tano-i-learned-it-from-you-unit-2393be232d35",
+        "falseVisualFamilyId": "swuvf-f3065365bc6ea4681c1a"
+      },
+      {
+        "refId": "swup-019d317a-db76-7f3b-a279-fdc348932541:front",
+        "falseRefId": "swup-019d317a-db3c-799f-bdd7-88d50089a3c3:front",
+        "margin": -0.00004177267941130047,
+        "correctScore": 0.9854001143945126,
+        "falseScore": 0.9854418870739239,
+        "falseCardId": "swu-kylo-ren-killing-the-past-unit-49043ae1d8c6",
+        "falseVisualFamilyId": "swuvf-a685ea412bdefde1b01a"
+      },
+      {
+        "refId": "swup-019d3178-0d68-773e-becd-af35fed7abb7:front",
+        "falseRefId": "swup-019d3178-0d2d-746d-98cc-b2ba30849f9a:front",
+        "margin": -0.000014388309559132395,
+        "correctScore": 0.9998788961059564,
+        "falseScore": 0.9998932844155155,
+        "falseCardId": "swu-unrefusable-offer-upgrade-2cf3557e6672",
+        "falseVisualFamilyId": "swuvf-2cc2375003acb4d93127"
+      },
+      {
+        "refId": "swup-019f07b4-0dbe-7ee3-abc3-ea9b67d7ed86:front",
+        "falseRefId": "swup-019f07b4-0f40-7853-aaf9-03d2d2740066:front",
+        "margin": -0.000004605119021228177,
+        "correctScore": 0.9968863430579646,
+        "falseScore": 0.9968909481769859,
+        "falseCardId": "swu-one-must-destroy-to-create-event-740a74326713",
+        "falseVisualFamilyId": "swuvf-86e3b5efd15eca06bbb7"
+      },
+      {
+        "refId": "swup-019d317d-300b-71f4-86bf-e6e3c697d33f:front",
+        "falseRefId": "swup-019d317d-3040-71bd-a31a-e7b18aa8a4b0:front",
+        "margin": 0.00002220596834845434,
+        "correctScore": 0.9999905867331264,
+        "falseScore": 0.9999683807647779,
+        "falseCardId": "swu-queen-amidala-championing-her-people-unit-c059728d1b08",
+        "falseVisualFamilyId": "swuvf-74e2c012bc76c742b528"
+      },
+      {
+        "refId": "swup-019d317d-32e6-79db-81a0-ed68bc3f9196:front",
+        "falseRefId": "swup-019d317d-3318-7f1a-bfe5-cfefd0b5fcc5:front",
+        "margin": 0.00002855149046665506,
+        "correctScore": 0.9998932531283037,
+        "falseScore": 0.999864701637837,
+        "falseCardId": "swu-anakin-skywalker-champion-of-mortis-unit-43ee5ce224b7",
+        "falseVisualFamilyId": "swuvf-3cc56dd6a671f1a87e66"
+      },
+      {
+        "refId": "swup-019d3177-732a-7ab6-be2b-ac76d29fb5ca:front",
+        "falseRefId": "swup-019d3177-dc29-74d2-b726-447fd2d114ae:front",
+        "margin": 0.000036502350919009885,
+        "correctScore": 0.9919931590316041,
+        "falseScore": 0.9919566566806851,
+        "falseCardId": "swu-surprise-strike-event-75c513f37a52",
+        "falseVisualFamilyId": "swuvf-ac52d101c2e9f78804de"
+      },
+      {
+        "refId": "swup-019d8ad1-649f-7976-9312-dd595ebd3ad0:front",
+        "falseRefId": "swup-019d8ad1-649c-781f-a8ec-e0e8623c1332:front",
+        "margin": 0.00005060508903476091,
+        "correctScore": 0.9999924463472263,
+        "falseScore": 0.9999418412581915,
+        "falseCardId": "swu-chewbacca-mighty-rescuer-unit-eea9ea22fdd5",
+        "falseVisualFamilyId": "swuvf-7f757601e6056ad12353"
+      },
+      {
+        "refId": "swup-019d3179-fd88-7c68-8968-99f41e272c1c:front",
+        "falseRefId": "swup-019d3179-be96-7192-b32e-ac4cbc090797:front",
+        "margin": 0.00007850432265321672,
+        "correctScore": 0.9959296017805378,
+        "falseScore": 0.9958510974578846,
+        "falseCardId": "swu-grand-admiral-thrawn-how-unfortunate-leader-94de4f83cd3a",
+        "falseVisualFamilyId": "swuvf-637e313c748bd39f26ec"
+      },
+      {
+        "refId": "swup-019d317b-fb28-7bcf-acb7-d65a658f745d:front",
+        "falseRefId": "swup-019d317b-faed-7c7e-9c8d-7f680171d2d2:front",
+        "margin": 0.00008334948500199335,
+        "correctScore": 0.9996764866161513,
+        "falseScore": 0.9995931371311493,
+        "falseCardId": "swu-rey-keeping-the-past-unit-ce920a2d6d81",
+        "falseVisualFamilyId": "swuvf-89a46be9bcf70264906e"
+      },
+      {
+        "refId": "swup-019d3177-fba7-73c2-b029-942a0dc4bb96:front",
+        "falseRefId": "swup-019d3178-ccfd-7b91-a0e7-25f5e025809b:front",
+        "margin": 0.0000897686496005301,
+        "correctScore": 0.9936362977873301,
+        "falseScore": 0.9935465291377296,
+        "falseCardId": "swu-finalizer-might-of-the-first-order-unit-2fd09829eb96",
+        "falseVisualFamilyId": "swuvf-2c5d4b08eadcdaad7ce1"
+      },
+      {
+        "refId": "swup-019d4cf6-b576-750c-b9e5-e5b0eb466836:front",
+        "falseRefId": "swup-019d4cf6-b4c3-759f-9775-2618e3331149:front",
+        "margin": 0.0001012054044882138,
+        "correctScore": 0.99967074894775,
+        "falseScore": 0.9995695435432618,
+        "falseCardId": "swu-kanan-jarrus-spectre-one-unit-e44823830593",
+        "falseVisualFamilyId": "swuvf-a5dc06ce6671d0ed8f9f"
+      },
+      {
+        "refId": "swup-019d317c-e2f0-7b4f-9a14-55223cbf1d87:front",
+        "falseRefId": "swup-019d317c-6c86-7187-8083-f39de190d43c:front",
+        "margin": 0.00010847769876598523,
+        "correctScore": 0.9972474008203169,
+        "falseScore": 0.997138923121551,
+        "falseCardId": "swu-one-in-a-million-event-94b20dae37b5",
+        "falseVisualFamilyId": "swuvf-8af354c680622efc85fc"
+      },
+      {
+        "refId": "swup-019d317b-bf18-785b-a275-afd6ccdb86ce:front",
+        "falseRefId": "swup-019d317b-d4df-7893-9ea9-8b8118d3c829:front",
+        "margin": 0.00014166715076180392,
+        "correctScore": 0.9999886843987967,
+        "falseScore": 0.9998470172480349,
+        "falseCardId": "swu-second-sister-seeking-the-holocron-unit-a5ad39d52be8",
+        "falseVisualFamilyId": "swuvf-9facc4726563513f57fd"
+      },
+      {
+        "refId": "swup-019d3177-9060-74a4-b407-79976e1f9427:back",
+        "falseRefId": "swup-019d3177-4d4e-74d0-bc87-90f08f0f8c04:back",
+        "margin": 0.00019081044751068088,
+        "correctScore": 0.9999776742737585,
+        "falseScore": 0.9997868638262478,
+        "falseCardId": "swu-darth-vader-dark-lord-of-the-sith-leader-3b1b5b7f98d3",
+        "falseVisualFamilyId": "swuvf-4966ebe49c6e2297e41a"
+      },
+      {
+        "refId": "swup-019d3176-9cda-7e0d-811a-386802014ecd:front",
+        "falseRefId": "swup-019d3176-d674-7c7b-9b0b-80445887fa47:front",
+        "margin": 0.00021126823802086747,
+        "correctScore": 0.9918474588510654,
+        "falseScore": 0.9916361906130445,
+        "falseCardId": "swu-commence-the-festivities-event-93350cf5e14f",
+        "falseVisualFamilyId": "swuvf-acba963b5851a9e0a4c2"
+      },
+      {
+        "refId": "swup-019d3178-38c4-7a7c-af9e-2fe071fbebe4:front",
+        "falseRefId": "swup-019d3177-4813-7a22-bed6-0402fb7c93fc:front",
+        "margin": 0.00026823192248159877,
+        "correctScore": 0.9732532460976666,
+        "falseScore": 0.972985014175185,
+        "falseCardId": "swu-regional-sympathizers-unit-f4ba9d5c15c1",
+        "falseVisualFamilyId": "swuvf-232caeadb373b609d438"
+      },
+      {
+        "refId": "swup-019d317b-4712-7d43-a880-2e4f67abf538:front",
+        "falseRefId": "swup-019d317b-b3f8-7352-8f7e-2cbd2250be0f:front",
+        "margin": 0.0002818273093139201,
+        "correctScore": 0.9968361802208608,
+        "falseScore": 0.9965543529115469,
+        "falseCardId": "swu-disturbance-in-the-force-event-119fa15fe84a",
+        "falseVisualFamilyId": "swuvf-83644e657f896db7ec15"
+      },
+      {
+        "refId": "swup-019e8f15-e57d-7912-992f-72af21e8fe19:front",
+        "falseRefId": "swup-019f07b4-0894-7e33-b474-a5e9b0c134f0:front",
+        "margin": 0.00031803423412257725,
+        "correctScore": 0.993123832158526,
+        "falseScore": 0.9928057979244034,
+        "falseCardId": "swu-moff-gideon-indomitable-warlord-leader-9a518b4cbecb",
+        "falseVisualFamilyId": "swuvf-33b32f92fe4dc09fa8e2"
+      },
+      {
+        "refId": "swup-019d3179-0b17-7a3d-9856-39d22f54ce93:front",
+        "falseRefId": "swup-019d3179-8145-749b-bf04-e55963da820f:front",
+        "margin": 0.0003376802524510669,
+        "correctScore": 0.9999865786911712,
+        "falseScore": 0.9996488984387202,
+        "falseCardId": "swu-eta-2-light-interceptor-unit-8d4e6dd2e552",
+        "falseVisualFamilyId": "swuvf-4ca96e3f810a574250f1"
+      },
+      {
+        "refId": "swup-019d317d-037e-7e8c-90e7-01cf2af00517:front",
+        "falseRefId": "swup-019d317c-8b3a-7dca-adf9-c0abfbb3868b:front",
+        "margin": 0.00035363698565593626,
+        "correctScore": 0.9999234342619315,
+        "falseScore": 0.9995697972762756,
+        "falseCardId": "swu-arrest-event-2ca17460efd0",
+        "falseVisualFamilyId": "swuvf-3a3d1cfbd300a0484bf9"
+      },
+      {
+        "refId": "swup-019d3177-a8c8-79b3-85cf-f54ee762b58e:front",
+        "falseRefId": "swup-019d3178-8167-7c5d-8c8a-37f0a17e9c8c:front",
+        "margin": 0.00036383394665662205,
+        "correctScore": 0.9999906663319721,
+        "falseScore": 0.9996268323853155,
+        "falseCardId": "swu-headhunting-event-88ca3164f683",
+        "falseVisualFamilyId": "swuvf-27b0e4d90a20553679d8"
+      },
+      {
+        "refId": "swup-019d317c-3aae-7982-b891-88bdcb9dcf26:front",
+        "falseRefId": "swup-019d317c-b8de-73e3-8324-4c1d58c58f3d:front",
+        "margin": 0.0003807294975336495,
+        "correctScore": 0.9999883176963791,
+        "falseScore": 0.9996075881988454,
+        "falseCardId": "swu-dressellian-commandos-unit-bb3aec7a7d08",
+        "falseVisualFamilyId": "swuvf-c0f41057183abce5c7c2"
+      },
+      {
+        "refId": "swup-019d317c-1621-7962-96f8-0b71c37467c3:back",
+        "falseRefId": "swup-019d317c-1621-7962-96f8-0b71c37467c3:front",
+        "margin": 0.0003839788719385284,
+        "correctScore": 0.9789396356284568,
+        "falseScore": 0.9785556567565182,
+        "falseCardId": "swu-forward-command-post-base-56c5b50e4ce2",
+        "falseVisualFamilyId": "swuvf-58078d11fa3df8349ff1"
+      },
+      {
+        "refId": "swup-019d317d-11ce-7cd3-84f5-c184c6e47742:front",
+        "falseRefId": "swup-019d317c-9a0b-7d4f-9fc0-fd5759caad62:front",
+        "margin": 0.0003888328595919033,
+        "correctScore": 0.9937705059856083,
+        "falseScore": 0.9933816731260164,
+        "falseCardId": "swu-inspiring-senator-unit-fbea3ebdcf66",
+        "falseVisualFamilyId": "swuvf-e5e726fe3f3b80e96be4"
+      },
+      {
+        "refId": "swup-019d317b-9022-7f84-9ac7-06147e1c9776:front",
+        "falseRefId": "swup-019d3179-8ff4-7d20-9f26-0e6f4ae3aff0:front",
+        "margin": 0.0004011684751583644,
+        "correctScore": 0.9999953185820248,
+        "falseScore": 0.9995941501068665,
+        "falseCardId": "swu-padawan-starfighter-unit-e999a9defd3b",
+        "falseVisualFamilyId": "swuvf-9786aa1ac1010839ec39"
+      },
+      {
+        "refId": "swup-019d3178-a94e-76ea-8a7d-b454528278bc:front",
+        "falseRefId": "swup-019d3177-ccd4-7123-8f06-81d22a178df9:front",
+        "margin": 0.0004169932488022887,
+        "correctScore": 0.9999953969004046,
+        "falseScore": 0.9995784036516023,
+        "falseCardId": "swu-commission-event-040c1a9f56e1",
+        "falseVisualFamilyId": "swuvf-88e3973824e949993233"
+      },
+      {
+        "refId": "swup-019d317d-1aee-7b79-ad46-2b0525607ab9:front",
+        "falseRefId": "swup-019d317c-a7f8-7669-b131-315b01713321:front",
+        "margin": 0.0004466993510867656,
+        "correctScore": 0.9918776349976259,
+        "falseScore": 0.9914309356465392,
+        "falseCardId": "swu-cinta-kaz-the-struggle-comes-first-unit-843e3734d208",
+        "falseVisualFamilyId": "swuvf-8b35900133b30361263e"
+      },
+      {
+        "refId": "swup-019ff9c1-445c-714c-9e6c-45a6d8568672:front",
+        "falseRefId": "swup-019ff9c1-4436-7173-8289-cd5315bb524d:front",
+        "margin": 0.00045203017764827713,
+        "correctScore": 0.9999864724661909,
+        "falseScore": 0.9995344422885426,
+        "falseCardId": "swu-luke-skywalker-answering-the-call-unit-032fadc46c14",
+        "falseVisualFamilyId": "swuvf-18bef0449875f7b3c85c"
+      },
+      {
+        "refId": "swup-019f07b4-0d4c-7386-a494-7136be206fb5:front",
+        "falseRefId": "swup-019f07b4-0e17-70cc-827b-7c022a911362:front",
+        "margin": 0.00046200056197509554,
+        "correctScore": 0.9999971442799919,
+        "falseScore": 0.9995351437180168,
+        "falseCardId": "swu-baylan-skoll-fallen-jedi-unit-9d4f3863b977",
+        "falseVisualFamilyId": "swuvf-6f9a351d650814b64595"
+      },
+      {
+        "refId": "swup-019d317c-407d-7a10-9ccf-31c54d548749:front",
+        "falseRefId": "swup-019d317c-bec8-7bcb-a7de-f06f371cec1d:front",
+        "margin": 0.00047470583045405856,
+        "correctScore": 0.9939145170980862,
+        "falseScore": 0.9934398112676321,
+        "falseCardId": "swu-trade-route-taxation-event-e38060468f83",
+        "falseVisualFamilyId": "swuvf-73448221c5e85182304f"
+      },
+      {
+        "refId": "swup-019f07b4-115c-737c-8f13-70d1a4e35573:front",
+        "falseRefId": "swup-019f07b4-0afc-71a0-86f7-99d41ae172f4:front",
+        "margin": 0.0004774792355252133,
+        "correctScore": 0.99999463154312,
+        "falseScore": 0.9995171523075947,
+        "falseCardId": "swu-display-of-strength-event-a3655454c64f",
+        "falseVisualFamilyId": "swuvf-ec3dcf2fca3177a48019"
+      },
+      {
+        "refId": "swup-019d3179-3665-7e0e-89b8-c77890660c70:front",
+        "falseRefId": "swup-019d3179-a3b2-7848-951d-2b9351fa7d31:front",
+        "margin": 0.000482804556591776,
+        "correctScore": 0.9999947544439648,
+        "falseScore": 0.999511949887373,
+        "falseCardId": "swu-mace-windu-s-lightsaber-upgrade-bcdf0f340f2f",
+        "falseVisualFamilyId": "swuvf-a5a1678b838e1aeace75"
+      },
+      {
+        "refId": "swup-019d3177-81df-73de-a108-c93732cd1529:front",
+        "falseRefId": "swup-019d317b-3bce-7743-8605-cad053153b76:front",
+        "margin": 0.00048806378085908264,
+        "correctScore": 0.9898756352516929,
+        "falseScore": 0.9893875714708338,
+        "falseCardId": "swu-wampa-unit-126d83f71874",
+        "falseVisualFamilyId": "swuvf-b61dafefe6e58bc25a78"
+      },
+      {
+        "refId": "swup-019d317a-cfa6-7f07-aaaa-bf4de9f50ff9:front",
+        "falseRefId": "swup-019d317a-bfe7-78a6-913f-32a255897870:front",
+        "margin": 0.0004938428934848638,
+        "correctScore": 0.9951728308070218,
+        "falseScore": 0.9946789879135369,
+        "falseCardId": "swu-the-invisible-hand-crawling-with-vultures-unit-9d9d370a26f0",
+        "falseVisualFamilyId": "swuvf-f8d7b2eff9d6033497b1"
+      },
+      {
+        "refId": "swup-019d317b-562c-74d5-9eb9-715cc7b8a484:front",
+        "falseRefId": "swup-019d317a-e8bf-71e2-b14e-0ae054b292e9:front",
+        "margin": 0.000503171047719353,
+        "correctScore": 0.9975627732060988,
+        "falseScore": 0.9970596021583794,
+        "falseCardId": "swu-loth-wolf-unit-fb68c8b300a4",
+        "falseVisualFamilyId": "swuvf-a1fb9a347f8e001249b3"
+      }
+    ]
+  },
+  "candidateAudit": {
+    "ROBUSTLY_SEPARATED_CANDIDATE": 1100,
+    "CLOSE_CANDIDATE": 176,
+    "AMBIGUOUS_CANDIDATE": 3499
+  },
+  "sharedAudit": {
+    "groups": 2405,
+    "memberRefs": 4871,
+    "buildMilliseconds": 52871.792,
+    "anomalyThreshold": 0.94,
+    "anomalies": []
+  },
+  "detailed": {
+    "sampleRefs": 24,
+    "actualBuildMilliseconds": 4587.24,
+    "bytesPerReference": 142180,
+    "sizes": [
+      {
+        "refs": 24,
+        "rawBytes": 3412320,
+        "estimatedBuildMilliseconds": 4587.24
+      },
+      {
+        "refs": 100,
+        "rawBytes": 14218000,
+        "estimatedBuildMilliseconds": 19113.501
+      },
+      {
+        "refs": 250,
+        "rawBytes": 35545000,
+        "estimatedBuildMilliseconds": 47783.753
+      },
+      {
+        "refs": 500,
+        "rawBytes": 71090000,
+        "estimatedBuildMilliseconds": 95567.506
+      },
+      {
+        "refs": 1000,
+        "rawBytes": 142180000,
+        "estimatedBuildMilliseconds": 191135.012
+      },
+      {
+        "refs": 7180,
+        "rawBytes": 1020852400,
+        "estimatedBuildMilliseconds": 1372349.39
+      }
+    ],
+    "gzipRatio": 0.636065199043466,
+    "brotliRatio": 0.5558921789281193,
+    "estimatedRuntimeBytes7180": 1020852400
+  },
+  "architecture": {
+    "recommended": "B/C hybrid",
+    "options": {
+      "A": {
+        "rawBytes": 1020852400,
+        "estimatedGzipBytes": 649328685,
+        "estimatedBrotliBytes": 567483865,
+        "assessment": "lowest warm latency, unacceptable repository/network/RAM cost"
+      },
+      "B": {
+        "assessment": "bounded first-card network and RAM; deterministic shards; preferred hot path"
+      },
+      "C": {
+        "assessment": "small repository; extra first-seen image fetch and local descriptor build; preferred fallback with browser cache"
+      }
+    },
+    "reason": "global coarse Float32 index plus card/family-scoped detailed shards, with on-demand Vision asset fallback and browser cache"
+  },
+  "orientation": {
+    "portrait": "canonical canvas 72x108",
+    "landscape": "source is stretched into the same 72x108 canonical convention; no detector change in 3C",
+    "landscapeCases": [
+      {
+        "cardId": "swu-echo-caverns-base-423862ecfaa0",
+        "side": "back",
+        "refId": "swup-019d317c-08cb-7c70-844f-d41f945f2004:back",
+        "rank": 1
+      },
+      {
+        "cardId": "swu-echo-caverns-base-423862ecfaa0",
+        "side": "front",
+        "refId": "swup-019d317c-08cb-7c70-844f-d41f945f2004:front",
+        "rank": 1
+      },
+      {
+        "cardId": "swu-forward-command-post-base-56c5b50e4ce2",
+        "side": "back",
+        "refId": "swup-019d317c-1621-7962-96f8-0b71c37467c3:back",
+        "rank": 1
+      },
+      {
+        "cardId": "swu-forward-command-post-base-56c5b50e4ce2",
+        "side": "front",
+        "refId": "swup-019d317c-1621-7962-96f8-0b71c37467c3:front",
+        "rank": 1
+      }
+    ],
+    "leaderFrontBack": "separate side refs with shared cardId"
+  },
+  "detailedRecognitionAudit": {
+    "thresholds": {
+      "robustlySeparatedBelow": 0.9,
+      "closeBelow": 0.97,
+      "ambiguousAtOrAbove": 0.97
+    },
+    "counts": {
+      "ROBUSTLY_SEPARATED_CANDIDATE": 1124,
+      "CLOSE_CANDIDATE": 870,
+      "AMBIGUOUS_CANDIDATE": 2781
+    },
+    "candidates": 4775,
+    "sharedGroups": 2405,
+    "sharedAnomalyThreshold": 0.9,
+    "sharedAnomalies": [
+      {
+        "recognitionGroupId": "swurg-81dc32e2716286df6711",
+        "minDetailedSimilarity": 0.8786504588728502,
+        "refIds": [
+          "swup-019d3178-e047-7995-9161-b237a11e72a9:front",
+          "swup-019d3179-598e-76b3-ba13-28167dd2a49c:front"
+        ],
+        "cardName": "Calculating MagnaGuard"
+      },
+      {
+        "recognitionGroupId": "swurg-0fa5a7f7c358b8b8185b",
+        "minDetailedSimilarity": 0.8802077332847492,
+        "refIds": [
+          "swup-019d3179-f367-7b01-b4f0-2829baf196e2:front",
+          "swup-019d317a-724a-783e-811c-81779b54e21b:front"
+        ],
+        "cardName": "Shadowed Hover Tank"
+      },
+      {
+        "recognitionGroupId": "swurg-f1225cca617af2829318",
+        "minDetailedSimilarity": 0.8885563044638701,
+        "refIds": [
+          "swup-019d3177-074b-744d-9f6a-740ca9a7c84a:front",
+          "swup-019d3177-9662-7944-a229-cd4493441753:front"
+        ],
+        "cardName": "Pyke Sentinel"
+      },
+      {
+        "recognitionGroupId": "swurg-d394c7ee1d6133c39c82",
+        "minDetailedSimilarity": 0.888719483278636,
+        "refIds": [
+          "swup-019d3178-f0a8-7c82-8532-df66e40463f5:front",
+          "swup-019d3179-6924-7187-8d68-fa4af038f0ee:front"
+        ],
+        "cardName": "B2 Legionnaires"
+      }
+    ],
+    "requiredSharedCases": [
+      {
+        "recognitionGroupId": "swurg-4128f00d3e7cba57ab3d",
+        "minDetailedSimilarity": 0.9908694452663225,
+        "refIds": [
+          "swup-019d3178-d819-7b96-bf26-5a89137c3f0f:front",
+          "swup-019d3179-58d9-78fa-94fc-80e9ea877d58:front",
+          "swup-019d8ad1-65b1-7888-83f7-1f620e619d90:front"
+        ],
+        "cardName": "Clone Trooper"
+      },
+      {
+        "recognitionGroupId": "swurg-65e9af7114b5b40ff1f2",
+        "minDetailedSimilarity": 0.9999999999999967,
+        "refIds": [
+          "swup-019d3177-112e-74ab-b107-de2147d0575b:front",
+          "swup-019d3179-4cf4-78c8-8700-2bdf9013ee95:front"
+        ],
+        "cardName": "Battle Droid"
+      },
+      {
+        "recognitionGroupId": "swurg-826df376321c8563179b",
+        "minDetailedSimilarity": 0.9816435249634523,
+        "refIds": [
+          "swup-019d3177-7d4c-784d-bb08-896da8620572:front",
+          "swup-019d3178-6106-7031-8b9f-15f335b4df03:front"
+        ],
+        "cardName": "Red Three — Unstoppable"
+      },
+      {
+        "recognitionGroupId": "swurg-adf5dd25714fdd158ba3",
+        "minDetailedSimilarity": 0.999999999999998,
+        "refIds": [
+          "swup-019d3177-3f30-7984-9045-d23dd33bf335:front",
+          "swup-019d3178-315a-7ba4-b1a6-1ab6b7e97922:front"
+        ],
+        "cardName": "Red Three — Unstoppable"
+      },
+      {
+        "recognitionGroupId": "swurg-ebbcad86c3b8063cac77",
+        "minDetailedSimilarity": 0.9812069706154662,
+        "refIds": [
+          "swup-019d3178-d7dd-7b88-ae59-990f6f00aa3e:front",
+          "swup-019d3179-58a4-7c1c-a492-d8682dce245d:front",
+          "swup-019d8ad1-65ad-79c6-a97f-9096d997b4e2:front"
+        ],
+        "cardName": "Battle Droid"
+      },
+      {
+        "recognitionGroupId": "swurg-ed37c48cfcf79f382fd4",
+        "minDetailedSimilarity": 0.9999999999999968,
+        "refIds": [
+          "swup-019d3179-4d2d-7e70-bfff-d35a260b0540:front",
+          "swup-019d3179-bb12-7633-a793-ea84ee8469ab:front"
+        ],
+        "cardName": "Clone Trooper"
+      }
+    ],
+    "durationMilliseconds": 198636.007
+  }
+}

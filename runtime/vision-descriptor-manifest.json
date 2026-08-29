@@ -1,0 +1,18 @@
+{
+  "descriptorVersion": "tcgate-ident-v5-fast-72x108-b63435e",
+  "descriptorSourceCommit": "b63435e2796e0bf4f5118fcc8106a8eec44d1d2f",
+  "descriptorSourcePath": "public/identification-worker.js",
+  "descriptorSourceSha256": "306eafe4decdcce26287683bc581cd8ca24a0c2f58cd299873b093942127a14a",
+  "coarseIndex": "runtime/vision-coarse-index.bin",
+  "coarseManifest": "runtime/vision-coarse-index.json",
+  "detailedStrategy": "B/C-hybrid-recommended",
+  "detailedDescriptorDimension": {
+    "full": 7776,
+    "art": 4225,
+    "gradient": 7776,
+    "chroma": 15552,
+    "coarse": 216,
+    "totalFloat32": 35545,
+    "bytesPerReference": 142180
+  }
+}

@@ -1,5 +1,8 @@
 import json
 import sys
+import hashlib
+import math
+import struct
 from collections import Counter
 from pathlib import Path
 from jsonschema import Draft202012Validator, FormatChecker
@@ -13,6 +16,9 @@ groups = json.loads((ROOT / "data/recognition-groups.json").read_text(encoding="
 fingerprints = json.loads((ROOT / "data/visual-fingerprints.json").read_text(encoding="utf-8"))
 canonical = json.loads((ROOT / "runtime/canonical-vision-index.json").read_text(encoding="utf-8"))
 printing_index = json.loads((ROOT / "runtime/printing-recognition-index.json").read_text(encoding="utf-8"))
+coarse_manifest = json.loads((ROOT / "runtime/vision-coarse-index.json").read_text(encoding="utf-8"))
+coarse_binary = (ROOT / "runtime/vision-coarse-index.bin").read_bytes()
+descriptor_manifest = json.loads((ROOT / "runtime/vision-descriptor-manifest.json").read_text(encoding="utf-8"))
 coverage = json.loads((ROOT / "data/coverage.json").read_text(encoding="utf-8"))
 errors = []
 for kind, values in (("card", cards), ("printing", printings), ("face", faces), ("visual-family", families), ("recognition-group", groups)):
@@ -122,6 +128,25 @@ for ref in canonical:
 if {x.get("refId") for x in fingerprints} != set(ref_ids): errors.append("fingerprint coverage mismatch")
 if any(x.get("analysisVersion") != 1 for x in fingerprints): errors.append("visual analysis version mismatch")
 if printing_index.get("recognitionModelVersion") != "swu-recognition-v1-dev" or printing_index.get("recognitionProfileId") != "swu-v1-canonical-dev": errors.append("recognition index version mismatch")
+descriptor_version = "tcgate-ident-v5-fast-72x108-b63435e"
+source_commit = "b63435e2796e0bf4f5118fcc8106a8eec44d1d2f"
+source_sha = "306eafe4decdcce26287683bc581cd8ca24a0c2f58cd299873b093942127a14a"
+if coarse_manifest.get("descriptorVersion") != descriptor_version or descriptor_manifest.get("descriptorVersion") != descriptor_version: errors.append("descriptor version mismatch")
+if coarse_manifest.get("descriptorSourceCommit") != source_commit or descriptor_manifest.get("descriptorSourceCommit") != source_commit: errors.append("descriptor source commit mismatch")
+if coarse_manifest.get("descriptorSourceSha256") != source_sha or descriptor_manifest.get("descriptorSourceSha256") != source_sha: errors.append("descriptor source sha mismatch")
+coarse_refs = coarse_manifest.get("references", [])
+if len(coarse_refs) != len(canonical) or coarse_manifest.get("referenceCount") != len(canonical): errors.append("coarse reference cardinality mismatch")
+if len({x.get("refId") for x in coarse_refs}) != len(coarse_refs): errors.append("duplicate coarse refId")
+if {x.get("refId") for x in coarse_refs} != {x.get("refId") for x in canonical}: errors.append("coarse/canonical mapping mismatch")
+canonical_by_ref = {x["refId"]: x for x in canonical}
+for ref in coarse_refs:
+    source = canonical_by_ref.get(ref.get("refId"))
+    if not source or any(ref.get(key) != source.get(key) for key in ("cardId", "side", "visualFamilyId", "recognitionGroupId")): errors.append(f"coarse identity mismatch {ref.get('refId')}")
+dimension = coarse_manifest.get("dimension")
+expected_bytes = len(coarse_refs) * int(dimension or 0) * 4
+if dimension != 216 or coarse_manifest.get("byteLength") != expected_bytes or len(coarse_binary) != expected_bytes: errors.append("coarse binary length/dimension mismatch")
+if hashlib.sha256(coarse_binary).hexdigest() != coarse_manifest.get("binarySha256"): errors.append("coarse binary hash mismatch")
+if len(coarse_binary) % 4 == 0 and any(not math.isfinite(value[0]) for value in struct.iter_unpack("<f", coarse_binary)): errors.append("non-finite coarse value")
 classification_counts = Counter(x.get("classification") for x in groups)
 expected_coverage = {
     "imageAnalysisSuccess": sum(bool(x.get("imageSha256")) for x in fingerprints),

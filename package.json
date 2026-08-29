@@ -1,0 +1,13 @@
+{
+  "name": "tcgate-db-star-wars-unlimited-build",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:vision": "node scripts/build_vision_descriptors.mjs",
+    "benchmark:vision": "node scripts/benchmark_vision_descriptors.mjs",
+    "test:vision": "node --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "1.55.0"
+  }
+}

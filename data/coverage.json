@@ -90,5 +90,9 @@
   "unknownRecognitionGroups": 0,
   "canonicalVisionReferences": 7180,
   "canonicalVisionFrontReferences": 6719,
-  "canonicalVisionBackReferences": 461
+  "canonicalVisionBackReferences": 461,
+  "descriptorVersion": "tcgate-ident-v5-fast-72x108-b63435e",
+  "coarseDescriptorReferences": 7180,
+  "coarseDescriptorDimension": 216,
+  "coarseDescriptorBytes": 6203520
 }
