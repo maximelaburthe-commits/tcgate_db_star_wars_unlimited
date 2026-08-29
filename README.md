@@ -1,31 +1,31 @@
-# Star Wars: Unlimited — TCGate DB
+# TCGate DB — Star Wars: Unlimited
 
-Independent Star Wars: Unlimited database package for TCGate.
+Version `0.3.0-dev.1` introduces an explicit card / printing / face foundation.
+It does not yet enable SWU Vision in TCGate or Vision Lab.
 
-The database is rebuilt from the public SWU API full export. Every physical printing remains in `data/printings.json`, while Standard/Foil/Hyperspace/Showcase/reprint records are rolled up into gameplay objects in `data/cards.json`.
+## Identity model
 
-## GitHub update
+- **card** is the canonical gameplay identity. Standard, Foil, Hyperspace and
+  promo versions remain one card when gameplay is identical.
+- **printing** is one physical release identified from the stable upstream UUID.
+  It owns the set, `cardNumber`, serial code, variant, rarity and artist.
+- **face** is one visible side. It owns `refId`, `cardId`, `printingId`, `side`
+  and `imageUrl`.
 
-For the private alpha, updates remain user-triggered:
+Leaders and the two double-sided bases use one card and one printing identity
+with distinct front/back face references. A deployed leader is never a second
+canonical card.
 
-1. Open **Actions**.
-2. Select **Build or update TCGate database**.
-3. Click **Run workflow**.
-4. The workflow downloads the full source, validates the normalized database, rebuilds the runtime/Vision index, and commits the generated files when they changed.
+The runtime Vision index retains legacy `id` and adds `refId`. Recognition
+groups, descriptors and exact/shared printing classification belong to later
+checkpoints.
 
-No source change is published unless the workflow is manually run.
-
-## Local build
+## Synchronization
 
 ```bash
-python -m pip install -r requirements.txt
 python source/sync.py
+python source/sync.py --source-file path/to/swu-export.json
 python scripts/validate_db.py
 python scripts/build_runtime.py
+python -m unittest discover -s tests
 ```
-
-This repository stores metadata and source image URLs, not copyrighted image binaries.
-
-## 0.2.1 normalization fix
-
-Version 0.2.0 could leave each API record as its own gameplay card when upstream parent links did not resolve. 0.2.1 groups from both upstream variant/reprint relations and an exact gameplay-mechanics fingerprint, and the validator now refuses a build where non-standard printings exist but nothing was rolled up.

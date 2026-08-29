@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tcgate.example/schemas/swu/face-v0.3.json",
+  "title": "SWU physical printing face",
+  "type": "object",
+  "required": ["refId", "cardId", "printingId", "side", "imageUrl"],
+  "properties": {
+    "refId": { "type": "string", "pattern": "^swup-.+:(front|back)$" },
+    "cardId": { "type": "string", "pattern": "^swu-" },
+    "printingId": { "type": "string", "pattern": "^swup-" },
+    "side": { "enum": ["front", "back"] },
+    "imageUrl": { "type": "string", "format": "uri" }
+  },
+  "additionalProperties": false
+}

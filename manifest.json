@@ -2,9 +2,18 @@
   "schemaVersion": 1,
   "game": "star-wars-unlimited",
   "name": "Star Wars: Unlimited",
-  "databaseVersion": "0.2.1",
+  "databaseVersion": "0.3.0-dev.1",
+  "normalizationVersion": "swu-normalization-v2",
+  "identityModelVersion": "swu-gameplay-fingerprint-v1",
+  "faceModelVersion": "swu-face-v1",
   "status": "build-from-complete-source",
   "entrypoint": "runtime/cards.min.json",
   "visionIndex": "runtime/vision-index.json",
+  "faces": "data/faces.json",
+  "schemas": {
+    "card": "schemas/card.schema.json",
+    "printing": "schemas/printing.schema.json",
+    "face": "schemas/face.schema.json"
+  },
   "source": "SWU API full export"
 }

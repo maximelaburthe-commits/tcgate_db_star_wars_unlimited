@@ -1,8 +1,8 @@
 {
   "totalCards": 9185,
   "totalSets": 28,
-  "lastScrapedAt": "2026-08-23T06:07:59.357Z",
-  "exportedAt": "2026-08-23T21:39:30.170Z",
+  "lastScrapedAt": "2026-08-29T06:12:33.919Z",
+  "exportedAt": "2026-08-29T12:51:08.049Z",
   "sourceRecords": 9185,
   "normalizedGameplayCards": 3048,
   "normalizedPrintings": 9185,
@@ -69,5 +69,13 @@
     "Weekly Play": 136,
     "Weekly Play Foil": 127
   },
-  "grouping": "parent relations plus exact gameplay-mechanics fingerprint"
+  "grouping": "parent relations plus exact gameplay-mechanics fingerprint",
+  "normalizationVersion": "swu-normalization-v2",
+  "identityModelVersion": "swu-gameplay-fingerprint-v1",
+  "faceModelVersion": "swu-face-v1",
+  "normalizedFaces": 9646,
+  "sourceCardNumberCoverage": 9185,
+  "doubleSidedPrintings": 461,
+  "frontFaces": 9185,
+  "backFaces": 461
 }

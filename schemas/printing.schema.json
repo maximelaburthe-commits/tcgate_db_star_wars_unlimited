@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tcgate.example/schemas/swu/printing-v0.3.json",
+  "title": "SWU physical printing",
+  "type": "object",
+  "required": ["id", "cardId", "sourceId", "set", "cardNumber", "variant", "frontImageUrl"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^swup-" },
+    "cardId": { "type": "string", "pattern": "^swu-" },
+    "sourceId": { "type": "string", "minLength": 1 },
+    "set": { "type": "string", "minLength": 1 },
+    "cardNumber": { "type": "string", "minLength": 1 },
+    "variant": { "type": "string", "minLength": 1 },
+    "frontImageUrl": { "type": "string", "format": "uri" },
+    "backImageUrl": { "type": ["string", "null"], "format": "uri" }
+  },
+  "additionalProperties": true
+}

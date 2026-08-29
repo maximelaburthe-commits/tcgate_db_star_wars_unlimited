@@ -1,4 +1,5 @@
 import hashlib
+import argparse
 import json
 import re
 from collections import Counter, defaultdict
@@ -31,8 +32,8 @@ def normalized(value):
     return value
 
 
-def mechanics_payload(card):
-    """Fields that describe gameplay, deliberately excluding printing/art metadata."""
+def identity_payload_v1(card):
+    """Historical v0.2 gameplay payload. Keep byte-compatible to preserve card IDs."""
     aliases = {
         "name": ("name",),
         "subtitle": ("subtitle",),
@@ -57,6 +58,19 @@ def mechanics_payload(card):
         "isBase": ("isBase", "is_base"),
     }
     return {name: normalized(val(card, *keys)) for name, keys in aliases.items()}
+
+
+def mechanics_payload(card):
+    """Gameplay identity used for grouping, including both sides of physical cards."""
+    payload = identity_payload_v1(card)
+    payload.update(
+        {
+            "doubleSided": normalized(val(card, "doubleSided", "double_sided")),
+            "frontText": normalized(val(card, "frontText", "front_text")),
+            "backText": normalized(val(card, "backText", "back_text")),
+        }
+    )
+    return payload
 
 
 def mechanics_signature(card):
@@ -128,9 +142,16 @@ def representative(rows):
     return max(rows, key=score)
 
 
-response = requests.get(URL, timeout=120)
-response.raise_for_status()
-payload = response.json()
+parser = argparse.ArgumentParser()
+parser.add_argument("--source-file", type=Path, help="Read a versioned/source snapshot instead of the live API")
+args = parser.parse_args()
+
+if args.source_file:
+    payload = json.loads(args.source_file.read_text(encoding="utf-8"))
+else:
+    response = requests.get(URL, timeout=120)
+    response.raise_for_status()
+    payload = response.json()
 raw = payload.get("cards", [])
 sets = payload.get("sets", [])
 if not raw:
@@ -174,7 +195,8 @@ used_card_ids = set()
 for root_index, rows in groups.items():
     rep = representative(rows)
     mechanics = mechanics_payload(rep)
-    identity_seed = json.dumps(mechanics, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+    # v0.3 grouping sees both faces, while IDs deliberately retain the v0.2 seed.
+    identity_seed = json.dumps(identity_payload_v1(rep), sort_keys=True, ensure_ascii=False, separators=(",", ":"))
     label = slug("-".join(str(x or "") for x in (mechanics.get("name"), mechanics.get("subtitle"), mechanics.get("type"))))[:72]
     digest = hashlib.sha1(identity_seed.encode("utf-8")).hexdigest()[:12]
     cid = f"swu-{label}-{digest}" if label else f"swu-{digest}"
@@ -188,6 +210,7 @@ for root_index, rows in groups.items():
     cards.append(card)
 
 printings = []
+faces = []
 variant_counter = Counter()
 for index, card in enumerate(raw):
     group = uf.find(index)
@@ -200,27 +223,36 @@ for index, card in enumerate(raw):
         set_value = val(set_value, "code", "name")
     variant = val(card, "variantType", "variant_type") or "Standard"
     variant_counter[str(variant)] += 1
+    printing_id = "swup-" + slug(source_id)
+    front_image = val(card, "frontImageUrl", "front_image_url")
+    back_image = val(card, "backImageUrl", "back_image_url")
     printings.append(
         {
-            "id": "swup-" + slug(source_id),
+            "id": printing_id,
             "cardId": cid,
             "sourceId": source_id,
             "set": set_value,
-            "number": val(card, "collectorNumber", "collector_number"),
+            "cardNumber": val(card, "cardNumber", "card_number"),
             "serialCode": val(card, "serialCode", "serial_code"),
             "variant": variant,
             "rarity": val(card, "rarity"),
             "artist": val(card, "artist"),
-            "frontImageUrl": val(card, "frontImageUrl", "front_image_url"),
-            "backImageUrl": val(card, "backImageUrl", "back_image_url"),
+            "frontImageUrl": front_image,
+            "backImageUrl": back_image,
         }
     )
+    if front_image:
+        faces.append({"refId": f"{printing_id}:front", "cardId": cid, "printingId": printing_id, "side": "front", "imageUrl": front_image})
+    if back_image:
+        faces.append({"refId": f"{printing_id}:back", "cardId": cid, "printingId": printing_id, "side": "back", "imageUrl": back_image})
 
 cards.sort(key=lambda x: (str(x.get("name") or ""), str(x.get("subtitle") or ""), x["id"]))
-printings.sort(key=lambda x: (str(x.get("set") or ""), str(x.get("number") or ""), x["id"]))
+printings.sort(key=lambda x: (str(x.get("set") or ""), x["id"]))
+faces.sort(key=lambda x: (x["printingId"], x["side"]))
 
 (ROOT / "data/cards.json").write_text(json.dumps(cards, ensure_ascii=False, indent=2), encoding="utf-8")
 (ROOT / "data/printings.json").write_text(json.dumps(printings, ensure_ascii=False, indent=2), encoding="utf-8")
+(ROOT / "data/faces.json").write_text(json.dumps(faces, ensure_ascii=False, indent=2), encoding="utf-8")
 (ROOT / "data/sets.json").write_text(json.dumps(sets, ensure_ascii=False, indent=2), encoding="utf-8")
 
 meta = dict(payload.get("meta", {}))
@@ -234,6 +266,14 @@ meta.update(
         "unresolvedParentRelations": len(unresolved_relations),
         "variantTypes": dict(sorted(variant_counter.items())),
         "grouping": "parent relations plus exact gameplay-mechanics fingerprint",
+        "normalizationVersion": "swu-normalization-v2",
+        "identityModelVersion": "swu-gameplay-fingerprint-v1",
+        "faceModelVersion": "swu-face-v1",
+        "normalizedFaces": len(faces),
+        "sourceCardNumberCoverage": sum(1 for card in raw if val(card, "cardNumber", "card_number") not in (None, "")),
+        "doubleSidedPrintings": sum(1 for card in raw if bool(val(card, "doubleSided", "double_sided"))),
+        "frontFaces": sum(1 for card in raw if val(card, "frontImageUrl", "front_image_url")),
+        "backFaces": sum(1 for card in raw if val(card, "backImageUrl", "back_image_url")),
     }
 )
 (ROOT / "data/coverage.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")

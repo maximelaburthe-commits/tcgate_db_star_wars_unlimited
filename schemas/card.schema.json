@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tcgate.example/schemas/swu/card-v0.3.json",
+  "title": "SWU canonical gameplay card",
+  "type": "object",
+  "required": ["id", "name", "type", "doubleSided"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^swu-" },
+    "name": { "type": "string", "minLength": 1 },
+    "type": { "type": "string", "minLength": 1 },
+    "doubleSided": { "type": "boolean" },
+    "frontText": { "type": ["string", "null"] },
+    "backText": { "type": ["string", "null"] },
+    "printingCount": { "type": "integer", "minimum": 1 }
+  },
+  "additionalProperties": true
+}
